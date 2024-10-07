@@ -1,0 +1,90 @@
+{% extends "base.html" %}
+
+{% block title %}Chocolate Gratitud{% endblock %}
+
+{% block content %}
+<section class="section_1">
+    <div class="overlay-video">
+        <h1 class="overlay-video-title">DESCUBRE NUEVAS EXPERIENCIAS</h1>
+        <a href="#explore" class="overlay-video-btn">Explorar</a>
+    </div>
+
+    <video src="{{ url_for('static', filename='video/poncake_h.mp4') }}" autoplay muted loop></video>
+</section>
+
+<section class="section_2">
+    <div class="title-content">
+        <h1 class="title">Disfruta el delicioso sabor del chocolate fino</h1>
+    </div>
+    <div class="images-content">
+        <div class="img-div">
+            <img src="{{ url_for('static', filename='img/chocobombs.jpg') }}" alt="Regalos de chocolate">
+            <div class="overlay-img">
+                <h2 class="overlay-img-title">Regalos & Souveniers</h2>
+                <a href="#" class="overlay-img-btn">Ver Productos</a>
+            </div>
+        </div>
+        <div class="img-div">
+            <img src="{{ url_for('static', filename='img/truffles.jpg') }}" alt="Chocolate para repostería">
+            <div class="overlay-img">
+                <h2 class="overlay-img-title">Chocolate para Eventos</h2>
+                <a href="#" class="overlay-img-btn">Ver Paquetes</a>
+            </div>
+        </div>
+        <div class="img-div">
+            <img src="{{ url_for('static', filename='img/brownie.jpg') }}" alt="Chocolate para eventos">
+            <div class="overlay-img">
+                <h2 class="overlay-img-title">Chocolate para Repostería</h2>
+                <a href="#" class="overlay-img-btn">Ver Productos</a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="section_3">
+    <div class="services">
+            <div class="image-service">
+                <img src="{{ url_for('static', filename='img/wine_chocolate_bar.jpg') }}" alt="Chocolate y vino">
+            </div>
+        <div class="text-service">
+            <h1>Experiencias Sensoriales</h1>
+            <p>Siente la armonía entre el chocolate fino y vinos selectos.<br/>Cada bocado es una experiencia única</p>
+            <button type="submit" class="global-btn">Comprar</button>
+        </div>
+    </div>
+</section>
+
+<section class="section_4">
+    <div class="services">
+        <div class="text-service">
+            <h1>Regalos Empresariales</h1>
+            <p>Sorprende a tus clientes y colaboradores con regalos de chocolate fino.</p>
+            <button type="submit" class="global-btn">Reservar</button>
+        </div>
+        <div class="image-service">
+            <img src="{{ url_for('static', filename='img/truffles.jpg') }}" alt="Regalos de chocolate">
+        </div>
+    </div>
+</section>
+
+<div id="popup-suscription" class="popup">
+    <div class="popup-content">
+        <span class="popup-close" id="popup-close">&times;</span>
+        <div class="popup-left">
+            <h2>¡Suscríbete y disfrutá beneficios exclusivos!</h2>
+            <p>Recibe ofertas, promociones y regalos al ser miembro del club.</p>
+            <form action="/subscribe" method="POST">
+                <input type="email" name="email" placeholder="Ingresa tu correo electrónico" required>
+                <div class="checkbox">
+                    <input type="checkbox" id="subscribe-news" name="subscribe-news" required>
+                    <label for="subscribe-news">Acepto los <a href="{{ url_for('terms') }}">Términos y Condiciones. →</a></label>
+                </div>
+                <button type="submit" class="global-btn">Suscríbete</button>
+            </form>
+        </div>
+        <div class="popup-right">
+            <video src="{{ url_for('static', filename='video/girls.mp4') }}" autoplay muted loop></video>
+        </div>
+    </div>
+</div>
+{% endblock %}

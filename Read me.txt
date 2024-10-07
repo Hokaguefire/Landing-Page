@@ -1,0 +1,14 @@
+1. instalar Flask por el terminal
+pip install Flask
+
+Versión de Flask y Python utilizada en esta aplicación.
+Flask 3.0.3  
+Python 3.12.5
+
+2. Instalación de las dependencias Flask-SQLAlchemy y psycopg2.
+pip install Flask-SQLAlchemy psycopg2
+
+
+COMANDOS
+pip show flask : Ver la version de Flask y Python instalada.
+flask --version : Verificar la versión de Flask.

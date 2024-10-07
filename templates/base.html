@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Gratitud el mejor chocolate para ti"/>
+    <meta name="keywords" content="chocolate, café, chocolate ecuatoriano, chocolate fino, cacao fino, cafe de altura"/>
+    <meta name="author" content="David Quiñonez" />
+    <meta name="copyright" content="Chocolate Gratitud" />
+    <meta name="robots" content="index"/>
+    <meta name="robots" content="follow"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="icon" href="{{ url_for('static', filename='img/icons/cacao.png') }}">
+    <title>{% block title %}Chocolate Gratitud{% endblock %}</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+</head>
+
+<body>
+    <div class="bar-header">
+        <div class="bar-wrapper">
+            <a href="{{ url_for('index') }}" class="brand-logo">
+                <img src="{{ url_for('static', filename='img/icons/logo_white.png') }}" alt="Logo">
+            </a>
+
+            <div class="cta-content">
+                <p class="cta-text">Compra el regalo ideal</p>
+                <button class="global-btn">Ver Catálogo</button>
+            </div>
+
+            <div class="cart-content">
+                <i class="fa-solid fa-truck fa-lg cart-icon"></i>
+                <p>¡Envío gratis por tus compras desde $50!</p>
+            </div>
+        </div>
+    </div>
+
+    <main>
+        {% block content %}{% endblock %}
+    </main>
+
+    <footer>
+        <div class="bar-footer">
+            <p>© Gratitud 2024</p>
+            <ul id="nav-footer" class="right">
+                <li><a href="{{ url_for('terms') }}">Términos y Condiciones</a></li>
+            </ul>
+        </div>
+    </footer>
+
+    <button id="scroll-btn">↑</button>
+
+    <script type="module" src="{{ url_for('static', filename='js/main.js') }}"></script>
+</body>
+</html>
